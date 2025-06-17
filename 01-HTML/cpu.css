@@ -1,0 +1,30 @@
+﻿body
+{
+    background-color: #323232;
+    color: gainsboro;
+    font-family: 'Segoe UI';
+    font-family: Roboto, Segoe UI;
+}
+h4
+{
+    text-align: right;
+    font-family: Roboto;
+}
+p
+{
+    text-align:justify;
+    font-size:14pt;
+    font-family:Roboto;
+}
+ol
+{
+    list-style-type:upper-roman;
+}
+.nesting-lvl-1
+{
+    list-style-type:circle;
+}
+.nesting-lvl-2
+{
+    list-style-type:" - ";
+}
