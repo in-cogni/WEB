@@ -5,31 +5,39 @@
     /*font-family: 'Segoe UI';*/
     font-family: Roboto, 'Segoe UI';
 }
-
 h4
 {
     text-align: right;
     /*font-family: Roboto;*/
 }
-
 p
 {
     text-align:justify;
     font-size:14pt;
-    font-family:Roboto;
+    /*font-family:Roboto;*/
 }
-
 ol
 {
-    list-style-type: upper-roman;
+    list-style-type:upper-roman;
 }
-
 .nesting-lvl-1
 {
-    list-style-type: circle;
+    list-style-type:circle;
 }
-
 .nesting-lvl-2
 {
     list-style-type:" - ";
+}
+table
+{
+    border-collapse: collapse;
+}
+tr
+{
+    border: 1px solid #aeaed3;
+}
+td
+{
+    text-align: center;
+    border: 1px solid #aeaed3;
 }
