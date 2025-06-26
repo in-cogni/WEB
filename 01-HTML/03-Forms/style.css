@@ -9,3 +9,25 @@ input
     position: absolute;
     left: 100px;
 }
+textarea
+{
+    resize: none;
+    width: 500px;
+    height: 150px;
+}
+fieldset
+{
+    width: 475px;
+}
+.EULA
+{
+    width: 500px;
+    height: 300px;
+    border: solid 1px;
+    overflow: scroll;
+    text-align: justify;
+}
+div
+{
+    margin: 15px;
+}
