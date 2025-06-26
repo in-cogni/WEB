@@ -19,17 +19,31 @@
                        size="32"
                        minlength="3" maxlength="24"
                        required
-                       pattern="^[A-ZА-Яa-zа-я]*">
+                       pattern="^[A-ZА-Яa-zа-я]*"
+                       >
             </div>
+            <p></p>
             <div>
                 <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" size="32" placeholder="Пароль - Рыбамеч" />
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       size="32" 
+                       placeholder="Пароль - Рыбамеч" 
+                       minlength="8"
+                       required
+                       pattern="^(?=.*[0-9])(?=.*[!@#$%^&*_])(?=.*[A-ZА-Я])(?=.*[a-zа-я]).{8,}$"
+                       >
             </div>
+            <p></p>
             <div>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="name"/>
+                <input type="email" id="email" name="name" />
             </div>
-            <input type="submit" value="Отправить"/>
+            <p></p>
+            <input type="submit" value="Отправить" />
+            <p></p>
+
         </form>
     </main>
 </body>
