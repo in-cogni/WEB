@@ -28,7 +28,7 @@
                        name="password" 
                        size="32" 
                        placeholder="Пароль - Рыбамеч" 
-                       pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[~!@#$%^&*\(\)\[\]\{\}_\-=+'&quot\;:\,.?<>\/\\\|]).{8,}$"/>
+                       pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[~!@#$%^&*\(\)\[\]\{\}_\-=+'&quot\;:\,.?<>\/\\\|])[^\s]{8,}$"/>
             </div>
             <div>
                 <label for="email">E-mail:</label>
@@ -36,11 +36,13 @@
             </div>
             <div>
                 <label for="phone-number">Номер телефона:</label>
-                <input type="tel" 
-                       id="phone-number" 
-                       name="phone-number" 
-                       placeholder="+7(XXX) XXX XX XX"/>
-                       <!--pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"--> 
+                <input type="tel"
+                       id="phone-number"
+                       name="phone-number"
+                       placeholder="+7(XXX) XXX XX XX" 
+                       pattern="^\+7\d{10}$"/>
+                <!--pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"-->
+                
             </div>
             <div>
                 <label for="birth-date">Дата рождения:</label>
@@ -51,18 +53,18 @@
                        max="2011-01-01"/>
             </div>
             <div>
-                <label for="brief">Пару слов о себе:</label><br>
-                <textarea id="brief" name="brief" placeholder="Описание"></textarea>
+                <label for="brief">Пару слов о себе:</label>
+                <textarea style="position:absolute; left: 200px" id="brief" name="brief" placeholder="Описание"></textarea>
             </div>
             <div>
-                <img width="150" height="200" /><br>
-                <label for="photo">Выберите фоточку:)</label><br>
+                <img  width="150" height="200" /><br>
+                <label for="photo">Выберите фоточку:)</label>
                 <input type="file" id="photo" name="photo" />
             </div>
             <div>
                 <label for="color">Ваш любимый цвет</label>
-                <input type="color" id="color" name="color" />
-            </div>
+                <input type="color" id="color" name="color"/>
+            </div><br/>
             <input type="submit" value="Отправить"/>
         </form>
     </main>
