@@ -22,3 +22,17 @@ h1
     background-color:transparent;
     opacity: 0.5;
 }
+a
+{
+    color: #001719;
+}
+
+    a:hover, a:hover:visited
+    {
+        color: black;
+    }
+
+    a:visited
+    {
+        color: #001719;
+    }
