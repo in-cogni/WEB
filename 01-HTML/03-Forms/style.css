@@ -7,5 +7,9 @@ body
 input
 {
     position: absolute;
-    left: 300px;
+    left: 200px;
+}
+div
+{
+    margin-bottom: 10px;
 }
