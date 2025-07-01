@@ -2,16 +2,6 @@
 body
 {
     font-family: Roboto;
-    background-image: linear-gradient(to right, #F0FFCE ,#EDD1FF);
-}
-input
-{
-    position: absolute;
-    left: 200px;
-}
-div
-{
-    margin-bottom: 10px;
 }
 textarea
 {
