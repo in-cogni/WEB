@@ -17,12 +17,23 @@ button
 {
     background-color: whitesmoke;
     border-radius: 5px;
-    border: darkblue 2px solid;
+    border: darkblue 3px solid;
     height: 40px;
     width: 50px;
     margin-top: 5px;
     margin-left: 10px;
     text-align: center;
+    font-size: 14pt;
+}
+input
+{
+    border: white 1px solid;
+    border-radius: 5px;
+    background-image: radial-gradient(mediumblue 40%, dodgerblue 100%);
+    color: white;
+    font-weight: bold;
+    font-size: 8pt;
+    
 }
 .main_window
 {
@@ -280,7 +291,7 @@ input[type=text]
     margin-left: 12.5px;
     margin-right: 22.5px;
     background-color: transparent;
-    border: 2px solid;
+    border: 3px solid;
     border-top-color: gray;
     border-left-color: gray;
     border-bottom-color: white;
