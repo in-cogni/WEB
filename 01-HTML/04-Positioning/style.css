@@ -1,0 +1,38 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body
+{
+    background-color:darkslategray;
+    color:honeydew;
+    font-family: Roboto;
+}
+h1
+{
+    position: sticky;
+    top:0px;
+    background-color: darkslategray;
+}
+.logo
+{
+    width:450px;
+    height:450px;
+    position: fixed;
+    z-index:-1;
+    left: 700px;
+    top:250px;
+    background-color:transparent;
+    opacity: 0.5;
+}
+a
+{
+    color: #001719;
+}
+
+    a:hover, a:hover:visited
+    {
+        color: black;
+    }
+
+    a:visited
+    {
+        color: #001719;
+    }
