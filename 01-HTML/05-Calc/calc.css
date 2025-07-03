@@ -37,18 +37,12 @@ input
 }
 .main_window
 {
-    /*border: solid 1px;*/
-    /*position: relative;
-    left: 400px;
-    top: 100px;*/
     align-self: center;
     width: 400px;
     height: 360px;
     background: rgb(236,233,216);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-color: mediumblue;
-    border-width: 3px;
 }
 #app_icon
 {
@@ -64,219 +58,17 @@ input
     background-color: mediumblue;
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
-    border-bottom: mediumblue 2px solid;
     background-image: linear-gradient(to top, dodgerblue 1px, mediumblue 85%, dodgerblue calc(100% - 1px));
 }
 .title_bar_left_side
 {
-    display: flex;
+    display:flex;
     align-items: center;
-    text-shadow: 1px 1px 0px darkblue;
 }
-.control_button, .control_button:disabled, .control_button:disabled:hover
+.control_button
 {
-    width: 24px;
+    width:24px;
     height: 24px;
-    text-align: center;
-    border-radius: 5px;
-    border: solid 1px white;
-    padding: 0px;
-    background-image: linear-gradient(to bottom right, #55A1FF, #0020B5);
-    box-shadow: inset 2px 1px 3px 0px #77A1F5;
-    color: white;
-}
-    .control_button:hover
-    {
-        background-image: linear-gradient(to bottom right, #75C1FF, #2045D5);
-        box-shadow: inset 0px 0px 3px 3px #77A1F5;
-    }
-    .control_button:active
-    {
-        background-image: linear-gradient(to bottom right, #55A1CFF, #0025B5);
-        box-shadow: inset 0px 0px 3px 3px #5781F5;
-    }
-        .control_button:disabled, .control_button:disabled:hover
-        {
-            color: lightgray;
-            border-color: lightgray;
-        }
-
-        #close_button
-        {
-            background-image: linear-gradient(to bottom right, #C97475, #FF300E);
-            box-shadow: inset 3px 1px 3px 1px #C49A9B;
-        }
-#close_button:hover
-{
-    background-image: linear-gradient(to bottom right, #D98485, #FF3020);
-    box-shadow: inset 0px 0px 3px 3px #C49A9B;
-}
-#close_button:active
-{
-    background-image: linear-gradient(to bottom right, #D98455, #FF3020);
-    box-shadow: inset 0px 0px 3px 3px #B48A8B;
-}
-
-/*-----------------------------------------------------*/
-.client-rect
-{
-    width: auto;
-    height: 316px;
-    display: block;
-}
-#main-area
-{
-    display: flex;
-    justify-content: space-between;
-}
-#bottom-border
-{
-    width: 100%;
-    height: 5px;
-    background-color: darkblue;
-}
-#left-border
-{
-    width: 5px;
-    height: 322px;
-    background-image: linear-gradient(to right, #0022BBFF, #0055FFFF, #0022BBFF);
-}
-#right-border
-{
-    width: 5px;
-    height: 322px;
-    background-image: linear-gradient(to right, #001177CC, #0055BBFF, #001177CC);
-}
-/*------------------------------------*/
-#work-area
-{
-    width: 95%;
-    display: block;
-}
-.menu-bar, .display, .buttons
-{
-    width: 100%;
-}
-.display
-{
-    display: flex;
-    justify-content: center;
-}
-.menu-bar
-{
-    display: flex;
-    justify-content: left;
-}
-    .menu-bar > button
-    {
-        /*Для всех button, вложенных в блок 'menu-bar'*/
-        width: 50px;
-        height: 22px;
-        margin: 0;
-        border-radius: 0;
-        border: none;
-        background: rgb(236,233,216);
-    }
-        .menu-bar > button:hover
-        {
-            box-shadow: 1px 1px 0 0 gray;
-            background: rgb(246,243,226);
-        }
-        .menu-bar > button:active
-        {
-            box-shadow: inset 1px 1px 0 0 gray;
-            background: rgb(226,223,206);
-        }
-            #text
-            {
-                width: 93%;
-            }
-input[type=text]
-{
-    text-align: right;
-}
-.buttons
-{
-    display: flex;
-    justify-content: left;
-}
-    .buttons button
-    {
-        width: 50px;
-        height: 40px;
-        margin: 5px;
-
-        box-shadow: inset 0 -3px 5px 1px #e0e0e0;
-        border: 1px solid darkblue;
-        border-radius: 5px;
-    }
-        .buttons button:hover
-        {
-            background-color: #e0e0e0;
-            box-shadow: inset 0px 0px 2px 1px #ffb329;
-        }
-    .buttons button:active
-    {
-        box-shadow: inset 0px 0px 2px 1px lightgray;
-    }
-.memory-buttons
-{
-    display: grid;
-    grid-template-columns: 50px;
-    grid-template-rows: 40px 40px 40px 40px;
-    grid-gap: 10px;
-}
-    .memory-buttons > button, .operational-buttons > button
-    {
-        color: red;
-    }
-    .memory-buttons > #square
-    {
-        width: 32px;
-        height: 32px;
-        border: inset 2px;
-        margin: 7px 10px 7px;
-    }
-    .main-block button
-    {
-        margin: 5px;
-    }
-.wide-buttons
-{
-    margin: 0 17px;
-}
-    .wide-buttons > button
-    {
-        width: 85px;
-        color: red;
-    }
-
-.digits-and-operations
-{
-    display: flex;
-    justify-content: left;
-}
-
-.digit-buttons
-{
-    display: grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 40px 40px 40px 40px;
-    grid-gap: 10px;
-    margin: 0 10px 0 15px;
-}
-    .digit-buttons button
-    {
-        color: darkblue;
-    }
-
-.operational-buttons, .results
-{
-    display: grid;
-    grid-template-columns: 50px;
-    grid-template-rows: 40px 40px 40px 40px;
-    grid-gap: 10px;
-    margin-right: 10px;
 }
 .panel
 {
@@ -296,5 +88,13 @@ input[type=text]
     border-left-color: gray;
     border-bottom-color: white;
     border-right-color: white;
+}
+.main_space
+{
+    width: 392px;
+    height: 324px;
+    border: 4px solid;
+    border-image: linear-gradient(to left, mediumblue, white) 1;
+    border-top: none;
 }
 
