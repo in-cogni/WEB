@@ -37,18 +37,12 @@ input
 }
 .main_window
 {
-    border: solid 1px;
-    /*position: relative;
-    left: 400px;
-    top: 100px;*/
     align-self: center;
     width: 400px;
     height: 360px;
     background: rgb(236,233,216);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-color: mediumblue;
-    border-width: 3px;
 }
 #app_icon
 {
@@ -64,7 +58,6 @@ input
     background-color: mediumblue;
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
-    border-bottom: mediumblue 2px solid;
     background-image: linear-gradient(to top, dodgerblue 1px, mediumblue 85%, dodgerblue calc(100% - 1px));
 }
 .title_bar_left_side
@@ -95,5 +88,13 @@ input
     border-left-color: gray;
     border-bottom-color: white;
     border-right-color: white;
+}
+.main_space
+{
+    width: 392px;
+    height: 324px;
+    border: 4px solid;
+    border-image: linear-gradient(to left, mediumblue, white) 1;
+    border-top: none;
 }
 
