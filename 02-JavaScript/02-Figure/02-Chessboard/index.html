@@ -1,11 +1,26 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Chessboard</title>
+    <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-
+    <pre>
+        <script>
+            let value = prompt(`Введите размер доски: `);
+            let n = Number(value);
+            document.writeln(`<hr>`);
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= n; j++) {
+                    if ((i + j) % 2 == 0) document.write(`<span id="whitespan"></span>`);
+                    else document.write(`<span id="transparentspan"></span>`);
+                }
+                document.write(`<br>`); 
+            }
+            document.writeln(`<hr>`);
+        </script>
+    </pre>
 </body>
 </html>
