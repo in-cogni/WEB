@@ -1,15 +1,17 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Calc</title>
-    <link href="calc.css" rel="stylesheet"/>
+    <link href="calc.css" rel="stylesheet" />
+    <link rel="icon" href="img\calc.ico" type="image/x-icon">
+    <!--<link rel="icon" href="C:\Users\PC\source\repos\WEB\01-HTML\05-Calc\img\calc.ico" type="image/x-icon">-->
 </head>
 <body>
     <div class="main_window">
         <div class="title_bar">
-            <div class="title_bar_left_side"><img src="img/calc.ico" id="app_icon" /><div style="color: white"> - Калькулятор</div></div>
+            <div class="title_bar_left_side"><img src="img/calc.ico" id="app_icon" /> - Калькулятор</div>
             <div class="title_bar_right_side">
                 <input class="control_button" type="button" value="&#x1F5D5" />
                 <input class="control_button" type="button" value="&#128470" disabled />
@@ -25,6 +27,7 @@
                         <button><u>V</u>iew</button>
                         <button><u>H</u>elp</button>
                     </div>
+                    <div class="panel"></div>
                     <div class="display">
                         <input type="text" id="text" name="text" value="0." />
                     </div>
@@ -42,36 +45,30 @@
                                 <button>CE</button>
                                 <button>C</button>
                             </div>
-                            <div class="digits-and-operations">
-                                <div class="digit-buttons">
-                                    <button>7</button>
-                                    <button>8</button>
-                                    <button>9</button>
+                            <div class="digit-buttons">
+                                <button>7</button>
+                                <button>8</button>
+                                <button>9</button>
+                                <button style="color: #ca0000;">/</button>
+                                <button>sqrt</button>
 
-                                    <button>4</button>
-                                    <button>5</button>
-                                    <button>6</button>
+                                <button>4</button>
+                                <button>5</button>
+                                <button>6</button>
+                                <button style="color: #ca0000;">*</button>
+                                <button>%</button>
 
-                                    <button>1</button>
-                                    <button>2</button>
-                                    <button>3</button>
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button style="color: #ca0000;">-</button>
+                                <button>1/x</button>
 
-                                    <button>0</button>
-                                    <button>+/-</button>
-                                    <button>.</button>
-                                </div>
-                                <div class="operational-buttons">
-                                    <button>/</button>
-                                    <button>*</button>
-                                    <button>-</button>
-                                    <button>+</button>
-                                </div> 
-                                <div class="result">
-                                    <button>sqrt</button>
-                                    <button>%</button>
-                                    <button>1/x</button>
-                                    <button>=</button>
-                                </div>
+                                <button>0</button>
+                                <button>+/-</button>
+                                <button>.</button>
+                                <button style="color: #ca0000;">+</button>
+                                <button style="color: #ca0000;">=</button>
                             </div>
                         </div>
                     </div>
