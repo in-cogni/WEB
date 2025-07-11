@@ -3,9 +3,40 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>ChessboardSize</title>
 </head>
 <body>
-
+    <pre>
+        <script>
+            let n = Number(prompt(`Введите размер поля: `));
+            document.writeln(`<hr>`);
+            for (let i = 1; i <= n; i++)
+            {
+                for (let j = 1; j <= n; j++)
+                {
+                    for (let h = 1; h <= n; h++)
+                    {
+                        if ((i + h) % 2 == 0)
+                        {
+                            for (let q = 1; q <= n; q++)
+                            {
+                                document.write(`■ `);
+                            }
+                        }
+                        else 
+                        {
+                            for (let w = 1; w <= n; w++)                    {
+                                document.write(`  `);
+                            }
+                        }
+                    }
+                    document.write(`<br>`);
+                }
+            }
+                
+       
+            document.writeln(`<hr>`);
+        </script>
+    </pre>
 </body>
 </html>
