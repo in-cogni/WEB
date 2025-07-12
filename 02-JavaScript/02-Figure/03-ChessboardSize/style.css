@@ -1,4 +1,7 @@
 ﻿body
 {
     place-items: center;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
 }
