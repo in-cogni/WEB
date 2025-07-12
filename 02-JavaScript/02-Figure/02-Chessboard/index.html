@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <title>Chessboard</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="chessboard.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body>
     <pre>
         <script>
             let value = prompt(`Введите размер доски: `);
             let n = Number(value);
-            document.writeln(`<hr>`);
+            document.writeln(`<h1 style="text-align: center;">Шахматная доска</h1><hr>`);
             for (let i = 1; i <= n; i++) {
                 for (let j = 1; j <= n; j++) {
                     if ((i + j) % 2 == 0) document.write(`<span id="whitespan"></span>`);

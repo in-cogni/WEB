@@ -1,11 +1,35 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Pascal's triangle</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="triangle.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body>
+    <pre>
+        <script>
+            let user_num = prompt("Введите число рядов в треугольнике: ");
+            document.writeln('<br><h1>Треугольник Паскаля</h1><br>');
+            let value = Number(user_num);
+            for (let i = 0; i < value; i++)
+            {
+                let str = '';
+                let num = 1;
 
+                for (let j = 0; j <= i; j++)
+                {
+                    str += num;
+                    for (let r = 9; r >= (num.toString().length); r--)
+                    {
+                       str += ' ';
+                    }
+                    num = Math.round(num * (i - j) / (j + 1));
+                }
+                document.writeln(str + "<br/>");
+            }
+        </script>
+    </pre>
 </body>
 </html>
