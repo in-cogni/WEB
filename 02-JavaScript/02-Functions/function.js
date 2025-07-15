@@ -17,13 +17,13 @@ function SwitchBackground()
     if (switchButton.attributes.src.nodeValue == 'img/moon.png')
     {
         switchButton.attributes.src.nodeValue = 'img/sun.png';
-        document.body.style.backgroundColor = "black";
+        document.body.style.background = "#323232";
         document.body.style.color = "white";
     }
     else
     {
         switchButton.attributes.src.nodeValue = 'img/moon.png';
-        document.body.style.backgroundColor = "white";
+        document.body.style.background = "white";
         document.body.style.color = "black";
     }
 

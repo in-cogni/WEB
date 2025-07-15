@@ -9,3 +9,7 @@ input
 {
     font-size: 32px;
 }
+img[src='img/sun.png']
+{
+    filter: brightness(0) invert(1);
+}
