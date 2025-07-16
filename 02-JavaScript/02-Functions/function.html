@@ -11,15 +11,21 @@
     <div id="header">
         <div style="width: 88%">Header</div>
         <label for="delay"></label>
-        <input type="number" name="delay" value="3" min="1" max="10" id="delay"/>
+        <input type="number" name="delay" value="3" min="1" max="10" id="delay" />
         <!--<img src="img/moon.png" alt="Switch background image" id="switchBackground"  onclick="SwitchBackground()"/>-->
         <div id="switchBackground" onclick="SwitchBackground()"></div>
     </div>
+    <div id="mouse"></div>
     <h1>Functions</h1>
-    <input type="number" name="base" id="base" placeholder="Основание степени"/>
-    <input type="number" name="exponent" id="exponent" placeholder="Показатель степени"/>
-    <input type="number" name="power" id="power" placeholder="Степень" readonly/>
-    <button onclick="calculatePower()">Вычислить</button>
+    <input type="number" name="base" id="base" placeholder="Основание степени" />
+    <input type="number" name="exponent" id="exponent" placeholder="Показатель степени" />
+    <input type="number" name="power" id="power" placeholder="Степень" readonly />
+    <hr />
+    <input type="file" onchange="setImage()" id="image-file"/>
+    <br />
+    <div id="photo-container">
+    <img alt="Фотография" title="Фото" id="photo" />
+    </div>
     <script src="function.js"></script>
 </body>
 </html>
