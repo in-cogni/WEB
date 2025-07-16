@@ -6,42 +6,27 @@
     <link href="style.css" rel="stylesheet" />
     <link href="head.ico" rel="icon" type="image/x-icon"/>
     <title>Functions</title>
-
-    <style>
-        input, button
-        {
-            font-size: 32px;
-            border: solid 2px black;
-            border-radius: 8px;
-        }
-        input
-        {
-            width: 320px;
-        }
-        #header
-        {
-            display: flex;
-            justify-content: space-between;
-            align-items:center;
-        }
-        #switchBackground
-        {
-            width: 48px;
-            height: 48px;
-            margin: 24px;
-        }
-    </style>
 </head>
-<body>
+<body class="light">
     <div id="header">
         <div style="width: 88%">Header</div>
-        <img src="img/moon.png" alt="Switch background image" id="switchBackground" onclick="SwitchBackground()"/>
+        <label for="delay"></label>
+        <input type="number" name="delay" value="3" min="1" max="10" id="delay" />
+        <!--<img src="img/moon.png" alt="Switch background image" id="switchBackground"  onclick="SwitchBackground()"/>-->
+        <div id="switchBackground" onclick="SwitchBackground()"></div>
     </div>
+    <div id="mouse"></div>
     <h1>Functions</h1>
-    <input type="number" name="base" id="base" placeholder="Основание степени"/>
-    <input type="number" name="exponent" id="exponent" placeholder="Показатель степени"/>
-    <input type="number" name="power" id="power" placeholder="Степень" readonly/>
+    <input type="number" name="base" id="base" placeholder="Основание степени" />
+    <input type="number" name="exponent" id="exponent" placeholder="Показатель степени" />
+    <input type="number" name="power" id="power" placeholder="Степень" readonly />
     <button onclick="calculatePower()">Вычислить</button>
+    <hr />
+    <input type="file" onchange="setImage()" id="image-file" />
+    <br /><br />
+    <div id="photo-container">
+        <img alt="Фотография" title="Фото" id="photo" />
+    </div>
     <script src="function.js"></script>
 </body>
 </html>

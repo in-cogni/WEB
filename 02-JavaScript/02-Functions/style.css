@@ -4,13 +4,111 @@ body
     font-family: 'Roboto' /*, 'Segoe UI'*/;
     font-size: 32px;
     background-image: linear-gradient(to right, wheat, lightblue);
-    height: 100vh;
 }
-input
+input, button
 {
     font-size: 32px;
+    border: solid 2px black;
+    border-radius: 8px;
+}
+
+input
+{
+    width: 320px;
+}
+
+/*#header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#switchBackground
+{
+    width: 48px;
+    height: 48px;
+    margin: 24px;
 }
 img[src="img/sun.png"]
 {
     filter: brightness(0) invert(1);
+}
+*/
+#header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#delay
+{
+    width: 58px;
+    height: 25px;
+}
+
+#switchBackground
+{
+    width: 32px;
+    height: 32px;
+    margin: 24px;
+    transition: 3s;
+    background-size: 31px 31px;
+}
+
+input
+{
+    font-size: 32px;
+}
+
+img[src='img/sun.png']
+{
+    filter: brightness(0) invert(1);
+}
+
+.light
+{
+    background: #D8D8D8;
+    color: #323232;
+}
+
+    .light #switchBackground
+    {
+        /*content: url("img/moon.png");*/
+        background-image: url('img/moon.png');
+    }
+
+.dark
+{
+    background: #323232;
+    color: #D8D8D8;
+}
+
+    .dark #switchBackground
+    {
+        /*content: url("img/sun.png");*/
+        background-image: url('img/sun.png');
+        filter: brightness(0) invert(1);
+    }
+
+#image-file
+{
+    width: 995px;
+}
+#photo-container
+{
+    border: solid 1px;
+    display: inline-block;
+    min-width:220px;
+    min-height: 120px;
+}
+#photo
+{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-width: 995px;
+    max-height: 100%;
 }
