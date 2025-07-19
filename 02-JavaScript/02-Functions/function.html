@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <link href="style.css" rel="stylesheet" />
-    <link href="head.ico" rel="icon" type="image/x-icon"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link href="head.ico" rel="icon" type="image/x-icon" />
     <title>Functions</title>
 </head>
 <body class="light">
@@ -45,8 +46,21 @@
             </div>
             <div id="weekday"></div>
         </div>
+        <br />
+        <div class="date-container">
+            <label for="user-date">Выберите дату:</label>
+            <input id="user-date" type="date" name="user-date"/>
+            <button onclick="CountdownTimer()" id="button-count">Посчитать разницу</button>
+        </div>
+        <div class="date-container">
+            <label>Разница во времени: </label>
+            <div id="new-date">
+                <span id="new-year">years: 00</span>;
+                <span id="new-month">months: 00</span>;
+                <span id="new-day">days: 00</span>
+            </div>
+        </div>
     </div>
-    <hr>
     <h2>Functions</h2>
     <input type="number" name="base" id="base" placeholder="Основание степени" />
     <input type="number" name="exponent" id="exponent" placeholder="Показатель степени" />

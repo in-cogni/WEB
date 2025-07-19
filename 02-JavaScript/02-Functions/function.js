@@ -83,3 +83,19 @@ function addLeadingZero(number)
 {
     return number < 10 ? "0" + number : number;
 }
+function CountdownTimer()
+{
+    let value = document.getElementById("user-date").value;
+    if (!value) return;
+
+    let user_date = moment(value);
+    let now = moment();
+
+    let years = Math.abs(user_date.diff(now, 'years'));
+    let months = Math.abs(user_date.diff(now.add(years, 'years'), 'months')) % 12;
+    let days = Math.abs(user_date.diff(now.add(months, 'month'), 'days') % 30);
+
+    document.getElementById("new-year").textContent = "years: " + years;
+    document.getElementById("new-month").textContent = "months: " + months;
+    document.getElementById("new-day").textContent = "days: "+days;
+}
