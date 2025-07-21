@@ -28,9 +28,13 @@ function SwitchBackground()
     }*/
     let delay = Number(document.getElementById("delay").value);
     console.log(delay);
-    document.body.style.transition = `background-color ${delay}s, color ${delay}s`;
-    document.getElementById('switchBackground').style.transition = `background-image ${delay}s`;
-    document.body.className = document.body.className == "light" ? "dark" : "light";
+
+    document.body.style.transition = `background ${delay}s ease, color ${delay}s ease`;
+
+    document.getElementById('switchBackground').style.transition
+        =`background-image ${delay}s ease, filter ${delay}s ease`;
+
+    document.body.className = document.body.className === "light" ? "dark" : "light";
 }
 document.addEventListener("mousemove", function (event)
 {
@@ -136,15 +140,25 @@ function tickCountdown()
     targetTime.setDate(targetDate.getDate());
 
     //ќпредел€ем промежуток времени до указанной даты:
-    let duration = targetTime - now;    //–азность дат вычисл€етс€ в формате Timestamp
-    document.getElementById("duration").innerHTML = duration;
+    let duration = Math.abs(targetTime - now);    //–азность дат вычисл€етс€ в формате Timestamp
+    document.getElementById("duration").innerHTML = `milliseconds:${duration}`;
     //Timestamp - это количество миллисекунд от 1 €нвар€ 1970 года.
     let timestamp = Math.trunc(duration / 1000);
-    document.getElementById("timestamp").innerHTML = timestamp;
+    document.getElementById("timestamp").innerHTML = `seconds:${timestamp}`;
 
     //ќтображаем целевую дату/врем€ и промежуток на странице:
     document.getElementById("target-date-value").innerHTML = targetDate;
     document.getElementById("target-time-value").innerHTML = targetTime;
+
+    //ќтображаем часы, минуты, секунды:
+    let hours = timestamp / 3600;
+    let minutes = (timestamp % 3600) / 60;
+    let seconds = (timestamp % 3600) % 60;
+
+    document.getElementById("hours-unit").innerHTML = Math.trunc(hours);
+    document.getElementById("minutes-unit").innerHTML = Math.trunc(minutes);
+    document.getElementById("seconds-unit").innerHTML = Math.trunc(seconds);
+
 
     console.log(`now getTimezoneOffset:\t ${now.getTimezoneOffset()}`);
 
