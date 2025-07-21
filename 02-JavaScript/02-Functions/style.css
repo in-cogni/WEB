@@ -147,3 +147,42 @@ input[type=checkbox]
 {
     font-weight: bold;
 }
+/*********************************************************************************/
+#display
+{
+    border: solid 1px;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+}
+
+.time-block
+{
+    border: solid 3px;
+    border-radius: 10px;
+}
+
+.time-unit
+{
+    font-size: 48px;
+    color: rebeccapurple;
+    width: 148px;
+    height: 148px;
+    background-color: rgb(255, 236, 84);
+}
+
+.time-marker
+{
+    border: solid 1px;
+    background-color: rebeccapurple;
+    color: aliceblue;
+}
+
+.time-unit, .time-marker
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
