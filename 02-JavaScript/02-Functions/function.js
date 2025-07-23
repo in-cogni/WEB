@@ -151,16 +151,118 @@ function tickCountdown()
     document.getElementById("target-time-value").innerHTML = targetTime;
 
     //Отображаем часы, минуты, секунды:
-    let hours = timestamp / 3600;
-    let minutes = (timestamp % 3600) / 60;
-    let seconds = (timestamp % 3600) % 60;
+    //let hours = timestamp / 3600;
+    //let minutes = (timestamp % 3600) / 60;
+    //let seconds = (timestamp % 3600) % 60;
+
+    let days;
+    let weeks;
+    let months;
+    let years;
+    let hours;
+    let minutes;
+    let seconds;
+
+    removeTimeBlockById('years-unit');
+    removeTimeBlockById('months-unit');
+    removeTimeBlockById('weeks-unit');
+    removeTimeBlockById('days-unit');
+
+    if (timestamp >= (86400 * 365.25))//year
+    {
+        years = timestamp / (86400 * 365.25);
+        setTimeBlock('years-unit', 'years-marker', 'Years');
+        document.getElementById("years-unit").innerHTML = Math.trunc(years);
+        timestamp %= (86400 * 365.25);
+    }
+    else
+    {
+        removeTimeBlockById('years-unit');
+    }
+    if (timestamp >= ((365.25 / 12) * 86400))//month
+    {
+        months = timestamp / ((365.25 / 12) * 86400);
+        setTimeBlock('months-unit', 'months-marker', 'Months');
+        document.getElementById("months-unit").innerHTML = Math.trunc(months);
+        timestamp %= ((365.25 / 12) * 86400);
+    }
+    else
+    {
+        removeTimeBlockById('months-unit');
+    }
+    if (timestamp >= 604800)//week
+    {
+        weeks = timestamp / 604800;
+        setTimeBlock('weeks-unit', 'weeks-marker', 'Weeks');
+        document.getElementById("weeks-unit").innerHTML = Math.trunc(weeks);
+        timestamp %= 604800;
+    }
+    else
+    {
+        removeTimeBlockById('weeks-unit');
+    }
+    if (timestamp >= 86400)//day
+    {
+        days = timestamp / 86400;
+        setTimeBlock('days-unit', 'days-marker', 'Days');
+        document.getElementById("days-unit").innerHTML = Math.trunc(days);
+    }
+    else
+    {
+        removeTimeBlockById('days-unit');
+    }
+    hours = (timestamp % 86400) / 3600;
+    minutes = (timestamp % 3600) / 60;
+    seconds = (timestamp % 3600) % 60;
 
     document.getElementById("hours-unit").innerHTML = Math.trunc(hours);
     document.getElementById("minutes-unit").innerHTML = Math.trunc(minutes);
     document.getElementById("seconds-unit").innerHTML = Math.trunc(seconds);
 
-
     console.log(`now getTimezoneOffset:\t ${now.getTimezoneOffset()}`);
 
     setTimeout(tickCountdown, 100);
+}
+function removeTimeBlockById(id)//удаляет элемент на странице
+{
+    const element = document.getElementById(id);
+    if (!element)
+    {
+        return false;
+    }
+
+    const timeBlock = element.closest('.time-block');
+    if (!timeBlock)
+    {
+        return false;
+    }
+
+    timeBlock.remove();
+    return true;
+}
+function setTimeBlock(id1, id2, text2)//создает элемент на странице
+{
+    if (document.getElementById(id1))
+    {
+        return false;
+    }
+    const newTimeBlock = document.createElement('div');
+    newTimeBlock.className = 'time-block';
+
+    const elUnit = document.createElement('div');
+    elUnit.id = id1;
+    elUnit.className = 'time-unit';
+
+    const elMarker = document.createElement('div');
+    elMarker.id = id2;
+    elMarker.className = 'time-marker';
+    elMarker.textContent = text2;
+
+    newTimeBlock.appendChild(elUnit);
+    newTimeBlock.appendChild(elMarker);
+
+    const display = document.getElementById('display');
+    const hoursBlock = document.getElementById('hours-unit')?.parentElement;
+
+    display.insertBefore(newTimeBlock, hoursBlock || null);
 }
