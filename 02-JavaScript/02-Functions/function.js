@@ -141,9 +141,28 @@ function tickCountdown()
     const SECONDS_IN_WEEK = SECONDS_IN_DAY * 7;
     const DAYS_IN_MONTH = 365.25/12;
     const SECONDS_IN_MONTH = SECONDS_IN_DAY * DAYS_IN_MONTH;
-    const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365 + SECONDS_IN_HOUR * 6;
+    const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365 + SECONDS_IN_HOUR*6;
 
+    ///////////////////////////////////////////////////////////////////////////////////////
     let time_of_day = timestamp % SECONDS_IN_DAY;
+    //Убираем время дня из timestamp
+    let date = timestamp - time_of_day;
+
+    let str_date = '';
+    let years = Math.trunc(date / SECONDS_IN_YEAR); str_date += `Years: ${years}, `;
+    date = date - years * SECONDS_IN_YEAR;
+    let months = Math.trunc(date / SECONDS_IN_MONTH); str_date += `Months: ${months}, `;
+    date = date - months * SECONDS_IN_MONTH;
+    let weeks = Math.trunc(date / SECONDS_IN_WEEK); str_date += `Weeks: ${weeks}, `;
+    date = date - weeks * SECONDS_IN_WEEK;
+    if (weeks > 0) date = (date % (weeks * SECONDS_IN_WEEK));
+    let days = Math.ceil(date / SECONDS_IN_DAY);
+    str_date += `Days: ${days}, `;
+
+    document.getElementById("date-reminded").innerHTML = str_date;
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
     let hours = Math.floor(time_of_day / SECONDS_IN_HOUR);
     if (hours > 0) time_of_day = (time_of_day % (hours * SECONDS_IN_HOUR));
 
@@ -151,6 +170,7 @@ function tickCountdown()
     if (minutes > 0) time_of_day = (time_of_day % (minutes * SECONDS_IN_MINUTE));
 
     let seconds = time_of_day;
+
     ///////////////////////////////////////////////////////////////////////////////////////
 
     document.getElementById("hours-unit").innerHTML = addLeadingZero(hours);
